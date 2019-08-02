@@ -1,0 +1,123 @@
+@import 'variables';
+
+.button {
+  background-color: $danger;
+  border: none;
+  color: #fff;
+  padding: 10px;
+  min-width: 150px;
+  border-radius: 5px;
+  margin: 4px;
+  font-size: 11px;
+  font-weight: 600;
+  height: 40px;
+
+  &:active {
+    transform: scale(0.96);
+  }
+
+  &:hover {
+    background-color: $danger--hover;
+  }
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+}
+
+.button--warning {
+  background-color: $warning;
+
+  &:hover {
+    background-color: $warning--hover;
+  }
+}
+
+.button--danger {
+  background-color: $danger;
+
+  &:hover {
+    background-color: $danger--hover;
+  }
+}
+
+.button--empty {
+  background-color: #fff;
+  color: $danger;
+  border: 1px solid $danger;
+
+  &:hover {
+    color: #fff;
+    background-color: $danger;
+  }
+}
+
+.button--empty.button--success {
+  border-color: $success;
+  color: $success;
+
+  &:hover {
+    background-color: $success;
+    color: #fff;
+  }
+}
+
+.button--square {
+  width: 40px;
+  height: 40px;
+  min-width: unset;
+}
+
+.button--withicon {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    top: 0;
+    right: 40px;
+    background-color: #ff4343;
+  }
+
+  img {
+    width: 10px;
+    margin-right: 5px;
+  }
+}
+
+.button--link {
+  border: none;
+  background: none;
+  color: $success;
+  min-width: unset;
+  height: unset;
+  padding: 0;
+
+  &:hover {
+    background: none;
+    color: $success--hover;
+  }
+}
+
+.button--link.button--iconed {
+  border: none;
+  color: #a4a4a4;
+  display: flex;
+  align-items: center;
+
+  img {
+    width: 12px;
+    margin-right: 8px;
+  }
+}
+
+.button--link.button--danger {
+  color: $danger;
+}

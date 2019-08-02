@@ -1,0 +1,19 @@
+.BackButton{
+    position: absolute;
+    border: none;
+    background: none;
+    display: flex;
+    align-items: center;
+    font-size: 10px;
+    top: -15px;
+}
+
+.BackButton__image{
+    width: 18px;
+    margin-right: 8px;
+    transition: 500ms;
+}
+
+.BackButton:hover .BackButton__image{
+    transform: translateX(-8px);
+}

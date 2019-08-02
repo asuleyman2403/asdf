@@ -1,0 +1,54 @@
+.FlashMessage {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  display: none;
+}
+
+.FlashMessage--visible {
+  display: flex;
+}
+
+.FlashMessage__content {
+  margin: auto;
+  min-width: 300px;
+  max-width: 500px;
+  height: 300px;
+  background: linear-gradient(180deg, #3cdc58 0%, #bce696 100%);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border-radius: 5px;
+}
+
+.FlashMessage__content--danger {
+  background: linear-gradient(180deg, #f01a4e 0%, #ff6d6d 100%);
+}
+
+.FlashMessage__title {
+  color: #fff;
+  font-weight: 600;
+  font-size: 24px;
+  text-transform: uppercase;
+}
+
+.FlashMessage__image {
+  width: 50px;
+  margin: 32px 0;
+}
+
+.FlashMessage__text {
+  color: #fff;
+}
+
+.FlashMessage__button {
+  position: absolute;
+  bottom: -25px;
+}

@@ -1,0 +1,17 @@
+.Orders{
+    position: relative;
+    display: flex;
+    width: 100%;
+}
+
+.Orders__content{
+    padding-left: 24px;
+    width: 100%;
+}
+
+.Orders__header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}

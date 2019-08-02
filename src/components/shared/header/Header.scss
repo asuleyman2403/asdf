@@ -1,0 +1,94 @@
+.Header {
+  width: 100%;
+  height: 80px;
+  border-bottom: 1px solid #c4c4c4;
+  font-size: 14px;
+}
+
+.Header__content {
+  width: 1120px;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.Header__logo {
+  width: 160px;
+}
+
+.Header__nav {
+  display: flex;
+  height: 100%;
+  align-items: flex-end;
+}
+
+.Header__nav__link {
+  font-weight: 600;
+  margin-right: 16px;
+  margin-bottom: 16px;
+  color: #a4a4a4;
+  position: relative;
+
+  &:hover {
+    color: #ff6d6d;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.Header__nav__link.active {
+  color: #ff6d6d;
+
+  &::after {
+    content: '';
+    width: 100%;
+    height: 5px;
+    background-color: #ff6d6d;
+    display: block;
+    position: absolute;
+    border-radius: 10px;
+    top: calc(100% + 14px);
+  }
+}
+
+.Header__user {
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+
+.Header__profile {
+  width: 40px;
+  height: 40px;
+  color: #fff;
+  background: linear-gradient(180deg, #e33a96 0%, #02208d 100%);
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+  font-weight: 600;
+  position: relative;
+  cursor: pointer;
+}
+
+.Header__logout {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.Header__logout__image {
+  height: 18px;
+  margin-left: 8px;
+}
+
+.Header__notification{
+  margin-right: 32px;
+}
+
+.Header__notification-image {
+  width: 16px;
+}

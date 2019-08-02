@@ -1,0 +1,59 @@
+.HeaderDropdown {
+  position: absolute;
+  border-top: 10px solid #ff6d6d;
+  width: 180px;
+  top: calc(100% + 19px);
+  left: calc(50% - 90px);
+  border-radius: 0 0 1px 1px;
+  box-shadow: 0px 16px 34px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.2s;
+  z-index: 1;
+  background-color: #fff;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #ff6d6d;
+    transform: rotate(45deg);
+    top: -15px;
+    left: calc(50% - 4px);
+  }
+}
+
+.HeaderDropdown--visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.HeaderDropdown__item {
+  display: flex;
+  align-items: center;
+  padding: 2px 16px;
+  box-shadow: 0px 0.5px 0px rgba(0, 0, 0, 0.3);
+  font-weight: 600;
+  font-size: 12px;
+  color: #a1a1a1;
+
+  &:hover {
+    background-color: #eee;
+  }
+}
+
+.HeaderDropdown__item-image {
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  opacity: 0.5;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    position: relative;
+    top: -8px;
+  }
+}
