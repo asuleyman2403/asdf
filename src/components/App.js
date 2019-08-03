@@ -1,13 +1,9 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Storage from "./pages/storage/Storage";
 import RecordVideo from "./WebCam/WebCam";
-import HomePage from "./WebCam/BxJs";
-
+import MobileVideoRecorder from './MobileVideoRecorder/MobileVideoRecorder';
 class App extends Component {
   state = {
     isDesktop: false,
-    video: null
   };
 
   componentDidMount() {
@@ -43,34 +39,11 @@ class App extends Component {
     return os;
   }
 
-  
-  handleOnVideoChange = e => {
-    if(e.target.value) {
-      const blob = new Blob(this.chunks, {type: 'video/mp4'});
-      const videoURL = window.URL.createObjectURL(blob);
-      this.setState({video: videoURL});
-      alert(videoURL);
-    }
-  };
-
-  getSource() {
-    alert(this.state.video);
-    return this.state.video;
-  }
   render() {
-    const { isDesktop, video } = this.state;
+    const { isDesktop } = this.state;
     return (
       <>{isDesktop ? 
-      <RecordVideo/> : 
-      <div>
-        <input type="file" accept="video/mp4" onChange={this.handleOnVideoChange}/>
-        {
-          video &&
-          <video src={video} controls>
-             Your browser does not support the video tag.
-          </video>
-        }
-      </div>
+      <RecordVideo/> : <MobileVideoRecorder/>
     }</>
     );
   }

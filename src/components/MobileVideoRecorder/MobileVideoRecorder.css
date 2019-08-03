@@ -1,0 +1,22 @@
+.mobile-recorder__video {
+    display: block;
+    height: 250px;
+    width: auto;
+}
+
+.video__input-wrapper {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background: url('../../assets/images/video.png');
+    background-size: cover;
+}
+
+.video__input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+}

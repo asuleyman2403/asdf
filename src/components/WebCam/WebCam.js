@@ -115,11 +115,14 @@ class RecordVideo extends React.Component {
                     console.log(mediaRecorder.state);
                 })
                 mediaRecorder.ondataavailable = function(ev) {
+                    console.log(ev);
                     chunks.push(ev.data);
                     console.log(chunks);
                     
                 }
                 mediaRecorder.onstop = (ev)=>{
+                    console.log(chunks, ev);
+
                     let blob = new Blob(chunks, { 'type' : 'video/mp4;' });
                     chunks = [];
                     let videoURL = window.URL.createObjectURL(blob);                    
